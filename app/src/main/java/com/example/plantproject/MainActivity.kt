@@ -14,10 +14,14 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.plantproject.navigation.SetupNavGraph
 import com.example.plantproject.ui.theme.PlantprojectTheme
+import com.example.plantproject.viewModels.apiViewModel
 
 class MainActivity : ComponentActivity() {
 
     lateinit var navController: NavHostController
+    lateinit var mojviewmodel: apiViewModel
+//    mojviewmodel = apiViewModel()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +34,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     navController = rememberNavController()
-                    SetupNavGraph(navController = navController)
+                    SetupNavGraph(navController = navController,mojviewmodel )
                 }
             }
         }

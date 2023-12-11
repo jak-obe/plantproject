@@ -16,7 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun PlantCard(id: Int, name: String) {
+fun PlantCard(id: Int, name: String,temperatura: Int, wilgotnosc: Int, swiatlo: Int) {
     Card(
         modifier = Modifier
             .padding(10.dp)
@@ -30,12 +30,21 @@ fun PlantCard(id: Int, name: String) {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(Modifier.padding(8.dp)) {
-                Text(
-                    text = id.toString(),
-                )
-                Text(
-                    text = name,
-                )
+                Row(Modifier.padding(8.dp)){
+                    Text(
+                        text = "id: ${id.toString()}",
+                    )
+                    Text(
+                        text = " ${name}",
+                    )}
+                Row(Modifier.padding(8.dp)) {
+
+
+                    Text(text = "T: ${temperatura} ")
+                    Text(text = "W: ${wilgotnosc} ")
+                    Text(text = "Ś: ${swiatlo} ")
+                }
+
             }
         }
     }
@@ -44,5 +53,5 @@ fun PlantCard(id: Int, name: String) {
 @Preview(showBackground = true)
 @Composable
 fun previewPlantCard(){
-    PlantCard(id = 5, name = "nazwa")
+    PlantCard(id = 5, name = "marek", temperatura = 3, wilgotnosc = 2, swiatlo = 1)
 }

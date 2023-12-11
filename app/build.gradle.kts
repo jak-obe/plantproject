@@ -51,6 +51,10 @@ android {
 
 dependencies {
 
+    // retrofit2
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+
     // nawigacja
     implementation("androidx.navigation:navigation-compose:2.7.5")
 

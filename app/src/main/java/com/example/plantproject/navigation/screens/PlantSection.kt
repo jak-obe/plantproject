@@ -71,7 +71,7 @@ fun ListaRoslin(platList: List<Plant>) {
             }
         }
         items(platList){plant ->
-            PlantCard(plant.id,plant.name)
+            PlantCard(plant.id,plant.name,plant.temperatura,plant.wilgotnosc,plant.swiatlo)
         }
     }
 }
